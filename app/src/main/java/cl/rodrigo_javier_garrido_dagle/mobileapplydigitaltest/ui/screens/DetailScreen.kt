@@ -38,7 +38,7 @@ fun DetailScreen(
                     }
                 }
                 settings.javaScriptEnabled = true
-                loadUrl("https://github.com/Baharudin78")
+                loadUrl("https://github.com/jardindunoix")
                 webView = this
             }
         }, update = {
