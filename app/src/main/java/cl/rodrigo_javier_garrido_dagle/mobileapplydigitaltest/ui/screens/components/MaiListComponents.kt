@@ -37,7 +37,6 @@ fun ColumnItem(
     val storyLink = hit.storyUrl ?: "no link"
     val storyText = hit.storyText ?: hit.commentText
 
-//    val navController = rememberNavController()
 
     Card(
         modifier
