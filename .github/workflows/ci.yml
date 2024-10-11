@@ -1,0 +1,34 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ "settings" ]
+  pull_request:
+    branches: [ "settings" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: gradle
+      - name: Touch local properties
+        run: touch local.properties
+      - name: Add url base
+        run: echo "URL_BASE=\"https://hn.algolia.com/\"" >> local.properties
+      - name: Add url end point
+        run: echo "URL_ENDPOINT=\"api/v1/search_by_date?query=mobile/\"" >> local.properties
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+      - name: Build app
+        run: ./gradlew assemble
+
+
+
