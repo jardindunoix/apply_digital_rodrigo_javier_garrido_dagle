@@ -108,13 +108,14 @@ android {
 //        this.getByName("androidTest") {
 //            resources.srcDirs("src/androidTest/resources", "src/sharedTest/resources")
 //        }
-//        this.getByName("test") {
-//            resources.srcDirs("src/test/java/cl/rodrigo_javier_garrido_dagle/mobiledevtest")
-//        }
+        this.getByName("test") {
+            resources.srcDirs("src/test/java/cl/rodrigo_javier_garrido_dagle/mobiledevtest")
+        }
     }
-    testOptions {
-        unitTests.isReturnDefaultValues = true
-    }
+
+//    testOptions {
+//        unitTests.isReturnDefaultValues = true
+//    }
 // app/src/test/java/cl/rodrigo_javier_garrido_dagle/mobiledevtest/domain/usecases/HitUsecasesTest.kt
 // app/src/main/java/cl/rodrigo_javier_garrido_dagle/mobiledevtest/domain/usecases/HitUsecases.kt
     hilt {
