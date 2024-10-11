@@ -1,63 +1,50 @@
 package cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.ui.screens
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import android.graphics.Bitmap
+import android.view.ViewGroup
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavHostController
-import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.R
 import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.MainViewModel
 
 @Composable
 fun DetailScreen(
-   navController: NavHostController,
-   viewmodel: MainViewModel,
+    navController: NavHostController,
+    viewmodel: MainViewModel,
 ) {
-   Surface(
-      modifier = Modifier
-         .fillMaxSize()
-         .padding(0.dp)
-   ) {
-      Column(
-         Modifier.background(Color.Yellow)
-      ) {
 
-         Spacer(Modifier.padding(12.dp))
-         Row(
-            Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center
-         ) {
-            Image(
-               modifier = Modifier
-                  .padding(top = 0.dp)
-                  .width(180.dp)
-                  .height(180.dp)
-                  .padding(0.dp),
-               painter = painterResource(id = R.drawable.icon),
-               contentDescription = "image"
-            )
-         }
-         Spacer(Modifier.padding(12.dp))
-         Text(
-            text = "DETAAIILLLL",
-            color = Color.Black,
-            fontSize = 20.sp
-         )
-      }
-   }
+    var backEnable by remember { mutableStateOf(false) }
+    var webView: WebView? = null
+
+    AndroidView(
+        modifier = Modifier,
+        factory = { context ->
+            WebView(context).apply {
+                layoutParams = ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                )
+                webViewClient = object : WebViewClient() {
+                    override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                        backEnable = view!!.canGoBack()
+                    }
+                }
+                settings.javaScriptEnabled = true
+                loadUrl("https://github.com/Baharudin78")
+                webView = this
+            }
+        }, update = {
+            webView = it
+        })
+    BackHandler(enabled = backEnable) {
+        webView?.goBack()
+    }
 }

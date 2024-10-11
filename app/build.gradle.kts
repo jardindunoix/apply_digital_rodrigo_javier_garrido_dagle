@@ -108,10 +108,11 @@ android {
 //        this.getByName("androidTest") {
 //            resources.srcDirs("src/androidTest/resources", "src/sharedTest/resources")
 //        }
-//        this.getByName("test") {
-//            resources.srcDirs("src/test/java/cl/rodrigo_javier_garrido_dagle/mobiledevtest")
-//        }
+        this.getByName("test") {
+            resources.srcDirs("src/test/java/cl/rodrigo_javier_garrido_dagle/mobiledevtest")
+        }
     }
+
 //    testOptions {
 //        unitTests.isReturnDefaultValues = true
 //    }
@@ -181,8 +182,6 @@ dependencies {
     //
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.accompanist.swiperefresh)
-    //
-    //    implementation(libs.material3)
     //
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")

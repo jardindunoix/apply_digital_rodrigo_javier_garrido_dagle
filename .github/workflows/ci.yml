@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ "ui" ]
+    branches: [ "webview" ]
   pull_request:
-    branches: [ "ui" ]
+    branches: [ "webview" ]
 
 jobs:
   build:
