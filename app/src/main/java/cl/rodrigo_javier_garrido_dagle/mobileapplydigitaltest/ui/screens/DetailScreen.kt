@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.R
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.MainViewModel
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.MainViewModel
 
 @Composable
 fun DetailScreen(

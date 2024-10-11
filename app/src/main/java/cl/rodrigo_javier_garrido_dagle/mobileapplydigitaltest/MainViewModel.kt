@@ -1,11 +1,11 @@
-package cl.rodrigo_javier_garrido_dagle.mobiledevtest
+package cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.domain.model.Hit
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.domain.repositories.ConnectivityRepository
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.domain.usecases.HitUsecases
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.domain.model.Hit
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.domain.repositories.ConnectivityRepository
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.domain.usecases.HitUsecases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow

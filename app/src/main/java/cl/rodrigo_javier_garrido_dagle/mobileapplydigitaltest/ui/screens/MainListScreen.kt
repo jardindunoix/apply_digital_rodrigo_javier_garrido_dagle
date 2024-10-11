@@ -13,7 +13,7 @@ import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.domain.model.Hit
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.MainViewModel
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.MainViewModel
 import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.ui.screens.components.ColumnItem
 import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.ui.screens.components.SwipeToDeleteContainer
 import com.google.accompanist.swiperefresh.SwipeRefresh

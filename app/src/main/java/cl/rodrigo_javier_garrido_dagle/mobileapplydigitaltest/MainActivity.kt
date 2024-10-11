@@ -12,7 +12,6 @@ import androidx.lifecycle.lifecycleScope
 import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.domain.model.Hit
 import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.ui.navigation.AppNavigation
 import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.ui.theme.MobileApplyDigitalTestTheme
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
