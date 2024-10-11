@@ -9,6 +9,8 @@ lifecycleRuntimeKtx = "2.8.6"
 activityCompose = "1.9.2"
 composeBom = "2024.04.01"
 # added
+accompanistSwiperefresh = "0.27.0"
+navigationCompose = "2.8.2"
 picasso = "2.71828"
 coroutines = "1.7.3"
 activities = "1.8.1"
@@ -23,14 +25,16 @@ gson = "2.9.1"
 daggerPluginVersion = "2.45"
 daggerHiltVersion = "2.49"
 hiltCompiler = "1.2.0"
-mokk = "1.13.2"
+mokk = "1.13.12"
 mockito = "2.25.0"
 mockitoinline = "2.13.0"
-junitJupiter = "5.8.1"
-
+composeMaterial = "1.4.0"
 
 [libraries]
+accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanistSwiperefresh" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtx" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -47,6 +51,7 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 # added
 androidx-picasso = { group = "com.squareup.picasso", name = "picasso", version.ref = "picasso" }
 googlegson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+#material3 = { module = "androidx.compose.material3:material3" }
 okhttp-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttp" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okHttp" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
@@ -65,13 +70,13 @@ roomkaptcompiler = { group = "androidx.room", name = "room-compiler", version.re
 mokk = { group = "io.mockk", name = "mockk", version.ref = "mokk" }
 mockitocore = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
 mockitoinline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockitoinline" }
-# Hilt
+#//Hilt
 dagger-google = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHiltVersion" }
 androidx-google-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "daggerHiltVersion" }
 androidx-google-dagger-kapt-android = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "daggerHiltVersion" }
 androidx-hilt-compiler-v120 = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltCompiler" }
 androidx-hilt-navigation-compose-v120 = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltCompiler" }
-junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter" }
+androidx-compose-material = { group = "androidx.wear.compose", name = "compose-material", version.ref = "composeMaterial" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -79,5 +84,4 @@ jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = 
 # added
 android-dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerPluginVersion" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-
 

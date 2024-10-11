@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3Api::class)
 
-package cl.rodrigo_javier_garrido_dagle.mobiledevtest.ui.screens
+package cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.ui.screens
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -12,10 +12,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.domain.model.Hit
 import cl.rodrigo_javier_garrido_dagle.mobiledevtest.MainViewModel
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.domain.model.Hit
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.ui.screens.components.ColumnItem
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.ui.screens.components.SwipeToDeleteContainer
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.ui.screens.components.ColumnItem
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.ui.screens.components.SwipeToDeleteContainer
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.SwipeRefreshIndicator
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
@@ -27,11 +27,10 @@ fun MainListScreen(
     navController: NavHostController,
     viewModel: MainViewModel,
     modifier: Modifier = Modifier,
-    hits_: List<Hit>
+    hitsY: List<Hit>
 ) {
     val isLoading by viewModel.isLoading.collectAsState()
     val swipeRefreshState = rememberSwipeRefreshState(isRefreshing = isLoading)
-
 
     SwipeRefresh(
         state = swipeRefreshState,
@@ -41,7 +40,7 @@ fun MainListScreen(
         }
     ) {
 
-        val hits = hits_.toMutableStateList()
+        val hits = hitsY.toMutableStateList()
 
         LazyColumn(
             modifier = Modifier

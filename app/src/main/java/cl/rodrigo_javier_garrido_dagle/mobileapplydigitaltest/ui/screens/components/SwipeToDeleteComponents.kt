@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3Api::class)
 
-package cl.rodrigo_javier_garrido_dagle.mobiledevtest.ui.screens.components
+package cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.ui.screens.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween

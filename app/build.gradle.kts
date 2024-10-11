@@ -123,7 +123,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -132,74 +131,75 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-// tests
+    implementation(libs.androidx.compose.material)
     testImplementation(libs.junit)
-    testImplementation(libs.junit.jupiter)
-    testImplementation(libs.junit.jupiter)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-//   added tests MOKK y mockito
+    // TESTS ADDED
     testImplementation(libs.mokk)
     testImplementation(libs.mockitocore)
     testImplementation(libs.mockitoinline)
-
-// TEST
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
-
-//
-
-
-//    testImplementation("junit:junit:4.12")
-//    testImplementation("org.mockito:mockito-core:2.24.5")
-
-
 //   picasso
     implementation(libs.androidx.picasso)
-//    retrofit
+    //    retrofit
     implementation(libs.androidx.retrofit)
     implementation(libs.androidx.retrofitgson)
 // okhttp
     implementation(libs.okhttp)
     implementation(libs.googlegson)
     implementation(libs.okhttp.interceptor)
-//    coroutines
+    //    coroutines
     implementation(libs.androidx.coroutines)
     implementation(libs.androidx.coroutinesandroid)
-//   coroutine lifecycle scopes
+    //   coroutine lifecycle scopes
     implementation(libs.androidx.activityktx)
     implementation(libs.androidx.lifecyclesextensions)
     implementation(libs.androidx.lifecycle)
     implementation(libs.androidx.lifecycle)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-// KTX - Viewmodel Y Livedata NO ACTUALIZAR: 2.5.1
+    // KTX - Viewmodel Y Livedata NO ACTUALIZAR: 2.5.1
     implementation(libs.androidx.lifecycle.livedata)
-//    data store
+    //    data store
     implementation(libs.androidx.datastore)
-//Room
+    //Room
     implementation(libs.room)
     kapt(libs.roomkaptcompiler)
     implementation(libs.androidx.room.runtime)
-//Hilt
+    //Hilt
     implementation(libs.dagger.google)
     implementation(libs.androidx.hilt.navigation.compose.v120)
     annotationProcessor(libs.androidx.google.compiler)
     kapt(libs.androidx.google.dagger.kapt.android)
     kapt(libs.androidx.google.compiler)
     kapt(libs.androidx.hilt.compiler.v120)
+    //navigation
+    implementation(libs.androidx.navigation.compose)
     //
-//    testImplementation("android.arch.core:core-testing:1.1.1")
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.accompanist.swiperefresh)
+    //
+    //    implementation(libs.material3)
+    //
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    implementation("androidx.activity:activity-compose:1.8.2")
+    implementation(platform("androidx.compose:compose-bom:2023.08.00"))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation(platform("androidx.compose:compose-bom:2023.08.00"))
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
 
 }
 
-// avoid the issues related NonExistentClass
 kapt { correctErrorTypes = true }

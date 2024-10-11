@@ -1,4 +1,4 @@
-package cl.rodrigo_javier_garrido_dagle.mobiledevtest.ui.screens.components
+package cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.ui.screens.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -19,8 +19,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.domain.model.Hit
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.utilities.Constants.DETAIL_SCREEN
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.domain.model.Hit
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.utilities.Constants.DETAIL_SCREEN
 import java.time.LocalDateTime
 import java.time.temporal.ChronoUnit
 
