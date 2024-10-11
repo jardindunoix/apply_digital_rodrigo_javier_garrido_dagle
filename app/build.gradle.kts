@@ -76,33 +76,33 @@ android {
     }
 
     flavorDimensions += "version"
-//    productFlavors {
-//
-//        create("Test") {
-//            applicationIdSuffix = ".Test"
-//            versionNameSuffix = "1_Test"
-//
-//            resValue(
-//                "string",
-//                "app_name",
-//                "Rodrigo Javier test"
-//            )
-//
-//            buildConfigField(
-//                "String",
-//                "URL_BASE",
-//                properties.getProperty("URL_BASE")
-//            )
-//
-//            buildConfigField(
-//                "String",
-//                "URL_ENDPOINT",
-//                properties.getProperty("URL_ENDPOINT")
-//            )
-//
-//        }
-//
-//    }
+    productFlavors {
+
+        create("Test") {
+            applicationIdSuffix = ".Test"
+            versionNameSuffix = "1_Test"
+
+            resValue(
+                "string",
+                "app_name",
+                "Rodrigo Javier test"
+            )
+
+            buildConfigField(
+                "String",
+                "URL_BASE",
+                properties.getProperty("URL_BASE")
+            )
+
+            buildConfigField(
+                "String",
+                "URL_ENDPOINT",
+                properties.getProperty("URL_ENDPOINT")
+            )
+
+        }
+
+    }
 
     sourceSets {
 //        this.getByName("androidTest") {
