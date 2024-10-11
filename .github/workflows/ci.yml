@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ "settings" ]
+    branches: [ "data-network" ]
   pull_request:
-    branches: [ "settings" ]
+    branches: [ "data-network" ]
 
 jobs:
   build:
