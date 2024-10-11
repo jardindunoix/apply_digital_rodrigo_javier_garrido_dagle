@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ "data-database" ]
+    branches: [ "mappers" ]
   pull_request:
-    branches: [ "data-database" ]
+    branches: [ "mappers" ]
 
 jobs:
   build:
