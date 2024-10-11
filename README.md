@@ -4,7 +4,7 @@
 
 ## REPOSITORY
 
-## **https://github.com/jardindunoix/android_test_rodrigo_javier_garrido_dagle**
+## **https://github.com/jardindunoix/apply_digital_rodrigo_javier_garrido_dagle**
 
 ![apply digital](https://a.storyblok.com/f/234030/556x192/227a4b0492/apply-digital-logo_full.png/m/556x192)
 
