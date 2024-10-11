@@ -26,7 +26,6 @@
 
 * mappers for data usage outside of domain
 
-
 * dependency injection with dagger hilt
 * I try to emulate the flow with special branches
 
