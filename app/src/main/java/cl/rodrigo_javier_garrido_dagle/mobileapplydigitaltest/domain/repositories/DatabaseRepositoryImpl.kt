@@ -1,9 +1,9 @@
-package cl.rodrigo_javier_garrido_dagle.mobiledevtest.domain.repositories
+package cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.domain.repositories
 
 import android.util.Log
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.data.database.entities.HitEntity
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.data.database.room.HitsDao
-import cl.rodrigo_javier_garrido_dagle.mobiledevtest.utilities.Constants.TAG
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.data.database.entities.HitEntity
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.data.database.room.HitsDao
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.utilities.Constants.TAG
 import javax.inject.Inject
 
 class DatabaseRepositoryImpl @Inject constructor(
