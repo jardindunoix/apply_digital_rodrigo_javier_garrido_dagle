@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ "mappers" ]
+    branches: [ "ui" ]
   pull_request:
-    branches: [ "mappers" ]
+    branches: [ "ui" ]
 
 jobs:
   build:
