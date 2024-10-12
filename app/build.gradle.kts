@@ -80,9 +80,9 @@ android {
     flavorDimensions += "version"
     productFlavors {
 
-        create("Test") {
-            applicationIdSuffix = ".Test"
-            versionNameSuffix = "1_Test"
+        create("ApplyDigital") {
+            applicationIdSuffix = ".ApplyDigital"
+            versionNameSuffix = "1_ApplyDigital"
 
             resValue(
                 "string",
