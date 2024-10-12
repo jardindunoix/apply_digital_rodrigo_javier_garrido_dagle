@@ -15,6 +15,7 @@ plugins {
     alias(libs.plugins.android.dagger.hilt)
     id("kotlin-android")
     id("kotlin-kapt")
+//    id("com.google.devtools.ksp") version "1.9.0-1.0.13"
 }
 
 android {
@@ -181,6 +182,7 @@ dependencies {
     //Room
     implementation(libs.room)
     kapt(libs.roomkaptcompiler)
+//    ksp("androidx.room:room-compiler:2.5.2")
     implementation(libs.androidx.room.runtime)
     //Hilt
     implementation(libs.dagger.google)
@@ -210,7 +212,12 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    //
+    testImplementation("junit:junit:4.13.2") // Example: JUnit dependency
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    testImplementation("org.mockito:mockito-core:4.11.0")
 }
 
 kapt { correctErrorTypes = true }
