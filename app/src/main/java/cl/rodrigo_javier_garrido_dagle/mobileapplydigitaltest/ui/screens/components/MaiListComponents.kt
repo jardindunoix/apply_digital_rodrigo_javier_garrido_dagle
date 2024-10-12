@@ -33,7 +33,7 @@ fun ColumnItem(
     val author = hit.author
     val title = hit.title ?: hit.storyTitle
     val storyDate = hit.updatedAt ?: hit.createdAt
-    val storyLink = hit.storyUrl ?: "no link"
+    val storyLink = hit.storyUrl ?: "https://github.com/jardindunoix/apply_digital_rodrigo_javier_garrido_dagle"
 //    val createdAtId = hit.createdAtI
 //    val storyText = hit.storyText ?: hit.commentText
 

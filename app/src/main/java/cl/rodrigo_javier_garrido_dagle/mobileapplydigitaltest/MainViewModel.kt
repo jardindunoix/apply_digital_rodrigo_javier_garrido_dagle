@@ -30,7 +30,7 @@ class MainViewModel @Inject constructor(
         viewModelScope.launch {
             _isLoading.value = true
             getAllHits()
-            delay(1000)
+            delay(500)
             _isLoading.value = false
         }
     }
