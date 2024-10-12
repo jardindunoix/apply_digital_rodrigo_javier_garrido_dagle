@@ -1,4 +1,5 @@
 import java.util.Properties
+
 val properties: Properties = Properties()
 
 properties.load(
@@ -52,20 +53,25 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
     buildFeatures {
         compose = true
         buildConfig = true
     }
+
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -78,9 +84,9 @@ android {
     flavorDimensions += "version"
     productFlavors {
 
-        create("Test") {
-            applicationIdSuffix = ".Test"
-            versionNameSuffix = "1_Test"
+        create("ApplyDigital") {
+            applicationIdSuffix = ".ApplyDigital"
+            versionNameSuffix = "1_ApplyDigital"
 
             resValue(
                 "string",
@@ -104,6 +110,7 @@ android {
 
     }
 
+// **********************************************
     sourceSets {
 //        this.getByName("androidTest") {
 //            resources.srcDirs("src/androidTest/resources", "src/sharedTest/resources")
@@ -112,15 +119,20 @@ android {
             resources.srcDirs("src/test/java/cl/rodrigo_javier_garrido_dagle/mobiledevtest")
         }
     }
+// **********************************************
 
 //    testOptions {
 //        unitTests.isReturnDefaultValues = true
 //    }
 // app/src/test/java/cl/rodrigo_javier_garrido_dagle/mobiledevtest/domain/usecases/HitUsecasesTest.kt
 // app/src/main/java/cl/rodrigo_javier_garrido_dagle/mobiledevtest/domain/usecases/HitUsecases.kt
+
+// **********************************************
     hilt {
         enableAggregatingTask = true
     }
+// **********************************************
+
 }
 
 dependencies {

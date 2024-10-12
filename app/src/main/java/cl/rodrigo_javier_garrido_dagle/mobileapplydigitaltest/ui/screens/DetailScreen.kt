@@ -18,7 +18,8 @@ import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.MainViewModel
 @Composable
 fun DetailScreen(
     navController: NavHostController,
-    viewmodel: MainViewModel,
+    viewModel: MainViewModel,
+    args: String?
 ) {
 
     var backEnable by remember { mutableStateOf(false) }
@@ -38,7 +39,7 @@ fun DetailScreen(
                     }
                 }
                 settings.javaScriptEnabled = true
-                loadUrl("https://github.com/jardindunoix")
+                loadUrl(args!!)
                 webView = this
             }
         }, update = {

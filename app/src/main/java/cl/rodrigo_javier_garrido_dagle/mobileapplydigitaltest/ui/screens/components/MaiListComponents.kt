@@ -33,10 +33,9 @@ fun ColumnItem(
     val author = hit.author
     val title = hit.title ?: hit.storyTitle
     val storyDate = hit.updatedAt ?: hit.createdAt
-    val createdAtId = hit.createdAtI
     val storyLink = hit.storyUrl ?: "no link"
-    val storyText = hit.storyText ?: hit.commentText
-
+//    val createdAtId = hit.createdAtI
+//    val storyText = hit.storyText ?: hit.commentText
 
     Card(
         modifier
@@ -45,9 +44,7 @@ fun ColumnItem(
             .wrapContentSize()
             .padding(1.dp)
             .clickable {
-                navController.navigate(
-                    route = DETAIL_SCREEN,
-                )
+                navController.navigate(route = DETAIL_SCREEN)
             },
         colors = CardDefaults.cardColors(
             containerColor = Color.White

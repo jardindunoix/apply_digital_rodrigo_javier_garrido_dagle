@@ -21,12 +21,11 @@ class MainActivity : ComponentActivity() {
     private val viewModel by viewModels<MainViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        enableEdgeToEdge()
+
         lifecycleScope.launch {
             val hits: List<Hit> = viewModel.getAllHits()
             setContent {
                 MobileApplyDigitalTestTheme {
-
                     Surface(
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background
