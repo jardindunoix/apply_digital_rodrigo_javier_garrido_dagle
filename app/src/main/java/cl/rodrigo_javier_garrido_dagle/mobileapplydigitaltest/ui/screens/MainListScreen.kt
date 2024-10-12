@@ -50,7 +50,6 @@ fun MainListScreen(
                 items = hits,
                 key = { Gson().toJson(it) }
             ) { hit ->
-
                 SwipeToDeleteContainer(
                     item = hit,
                     onDelete = {
@@ -58,9 +57,10 @@ fun MainListScreen(
                     }
                 ) { innerHit ->
                     ColumnItem(
-                        modifier,
+                        modifier = modifier,
                         hit = innerHit,
                         navController = navController,
+                        viewModel = viewModel
                     )
                 }
             }

@@ -19,7 +19,6 @@ import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.MainViewModel
 fun DetailScreen(
     navController: NavHostController,
     viewModel: MainViewModel,
-    args: String?
 ) {
 
     var backEnable by remember { mutableStateOf(false) }
@@ -39,7 +38,8 @@ fun DetailScreen(
                     }
                 }
                 settings.javaScriptEnabled = true
-                loadUrl(args!!)
+                val url = viewModel.urlState.value
+                loadUrl(url!!)
                 webView = this
             }
         }, update = {
