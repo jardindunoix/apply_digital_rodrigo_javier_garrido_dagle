@@ -19,8 +19,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.MainViewModel
 import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.domain.model.Hit
 import cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest.utilities.Constants.DETAIL_SCREEN
+import kotlinx.coroutines.coroutineScope
 import java.time.LocalDateTime
 import java.time.temporal.ChronoUnit
 
@@ -29,11 +31,13 @@ fun ColumnItem(
     modifier: Modifier,
     hit: Hit,
     navController: NavController,
+    viewModel: MainViewModel,
 ) {
     val author = hit.author
     val title = hit.title ?: hit.storyTitle
     val storyDate = hit.updatedAt ?: hit.createdAt
-    val storyLink = hit.storyUrl ?: "https://github.com/jardindunoix/apply_digital_rodrigo_javier_garrido_dagle"
+    val storyLink =
+        hit.storyUrl ?: "https://github.com/jardindunoix"
 //    val createdAtId = hit.createdAtI
 //    val storyText = hit.storyText ?: hit.commentText
 
@@ -44,6 +48,7 @@ fun ColumnItem(
             .wrapContentSize()
             .padding(1.dp)
             .clickable {
+                viewModel.urlState.value = storyLink
                 navController.navigate(route = DETAIL_SCREEN)
             },
         colors = CardDefaults.cardColors(

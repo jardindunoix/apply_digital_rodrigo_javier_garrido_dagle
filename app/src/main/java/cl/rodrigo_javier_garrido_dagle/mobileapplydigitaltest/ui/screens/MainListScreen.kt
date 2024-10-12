@@ -50,8 +50,6 @@ fun MainListScreen(
                 items = hits,
                 key = { Gson().toJson(it) }
             ) { hit ->
-                val storyLink = hit.storyUrl ?: "https://github.com/jardindunoix/apply_digital_rodrigo_javier_garrido_dagle"
-
                 SwipeToDeleteContainer(
                     item = hit,
                     onDelete = {
@@ -59,9 +57,10 @@ fun MainListScreen(
                     }
                 ) { innerHit ->
                     ColumnItem(
-                        modifier,
+                        modifier = modifier,
                         hit = innerHit,
                         navController = navController,
+                        viewModel = viewModel
                     )
                 }
             }

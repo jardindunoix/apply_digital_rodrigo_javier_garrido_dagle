@@ -1,5 +1,7 @@
 package cl.rodrigo_javier_garrido_dagle.mobileapplydigitaltest
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
@@ -18,11 +20,17 @@ class MainViewModel @Inject constructor(
     connectivityRepository: ConnectivityRepository,
     private val networkUsecases: HitUsecases,
 ) : ViewModel() {
+
+    private val _urlState: MutableLiveData<String> = MutableLiveData()
+    var urlState: MutableLiveData<String> = _urlState
+
     private val isOnline = connectivityRepository.isConnected.asLiveData()
     private val _isLoading = MutableStateFlow(false)
     var isLoading = _isLoading.asStateFlow()
 
     init {
+        _urlState.value =
+            "https://github.com/jardindunoix/apply_digital_rodrigo_javier_garrido_dagle"
         loading()
     }
 

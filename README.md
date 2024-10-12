@@ -33,7 +33,8 @@
     - The Swipe-to-Delete funcionality is depreated in some parts, so a had to ivestigate how to
       solve
       it.
-    
+    - The problem "Uresolved references in unit test": was a naming conflict issue
+    - passing data with persistence in the viewmodel 
 
 * I hope to demonstrate enough.
 
